@@ -1,5 +1,7 @@
 # java-rmi-dvd-database-demo
 
+[![build](https://github.com/annupuri/java-rmi-dvd-database-demo/actions/workflows/build.yml/badge.svg)](https://github.com/annupuri/java-rmi-dvd-database-demo/actions/workflows/build.yml)
+
 *[English](README.md) | 日本語*
 
 DVD レンタル在庫を管理するシステムの実装デモです。レコード単位の排他制御を備えたファイルベースのデータベース、

@@ -1,5 +1,7 @@
 # java-rmi-dvd-database-demo
 
+[![build](https://github.com/annupuri/java-rmi-dvd-database-demo/actions/workflows/build.yml/badge.svg)](https://github.com/annupuri/java-rmi-dvd-database-demo/actions/workflows/build.yml)
+
 *English | [日本語](README.ja.md)*
 
 A demo implementation of a DVD rental inventory system: a file-backed database with
