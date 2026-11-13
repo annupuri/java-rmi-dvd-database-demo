@@ -23,7 +23,7 @@ The client opens by asking for a connection type, then shows the catalogue:
 
 ## Stack
 
-Java 21, Gradle (Kotlin DSL). The runtime depends only on the standard library
+Java 25, Gradle (Kotlin DSL). The runtime depends only on the standard library
 (RMI, Swing, serialization, `java.util.regex`) — no third-party libraries. JUnit 5 is used for tests only.
 
 ## Design
@@ -53,7 +53,8 @@ and re-exposes it as a plain `DBClient`, so GUI code is identical whether the da
 ./gradlew build
 ```
 
-Gradle's toolchain support resolves a Java 21 JDK automatically (`.tool-versions` pins Temurin 21).
+Gradle's toolchain support resolves a Java 25 JDK automatically. With [asdf](https://asdf-vm.com/), `asdf install`
+installs the versions pinned in `.tool-versions` (Temurin 25 and Gradle, matching the wrapper).
 
 ## Test
 
@@ -108,7 +109,7 @@ changed with the first argument (`./gradlew runDosClient --args=/path/to/db ...`
 A learning project that pairs concurrent access control over a file-backed database with remote
 access (RMI) across a network.
 
-The code was first written around 2005; this repository revives it on a current toolchain — Java 21,
+The code was first written around 2005; this repository revives it on a current toolchain — Java 25,
 a Gradle build, and a JUnit 5 test suite — while keeping the original architecture (file-backed store,
 per-record locking, RMI, Swing).
 
