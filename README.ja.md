@@ -23,7 +23,7 @@ Java RMI 経由のリモートアクセス、Swing の管理クライアント�
 
 ## 技術スタック
 
-Java 21、Gradle（Kotlin DSL）。ランタイムは標準ライブラリのみ（RMI、Swing、シリアライズ、`java.util.regex`）で、
+Java 25、Gradle（Kotlin DSL）。ランタイムは標準ライブラリのみ（RMI、Swing、シリアライズ、`java.util.regex`）で、
 外部ライブラリへの依存はありません。テストのみ JUnit 5 を使用します。
 
 ## 設計
@@ -55,7 +55,8 @@ Java 21、Gradle（Kotlin DSL）。ランタイムは標準ライブラリのみ
 ./gradlew build
 ```
 
-JDK は Gradle の toolchain 機能が Java 21 を自動解決します（`.tool-versions` は Temurin 21 を指定）。
+JDK は Gradle の toolchain 機能が Java 25 を自動解決します。[asdf](https://asdf-vm.com/) を使う場合は、`asdf install` で
+`.tool-versions` に指定したバージョン（Temurin 25 と、wrapper と同じ Gradle）が入ります。
 
 ## テスト
 
@@ -110,7 +111,7 @@ Swing クライアントは検索・貸出・返却のみを行います。カ�
 組み合わせた学習用プロジェクトです。
 
 元のコードは 2005 年頃に書いたもので、このリポジトリではアーキテクチャ（ファイルベースの記録、
-レコード単位ロック、RMI、Swing）を保ったまま、現在のツールチェーン（Java 21、Gradle ビルド、
+レコード単位ロック、RMI、Swing）を保ったまま、現在のツールチェーン（Java 25、Gradle ビルド、
 JUnit 5 のテスト）へ載せ替えています。
 
 ## 位置づけ
